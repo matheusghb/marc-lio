@@ -15,9 +15,10 @@ body {
 #cachorro {
     z-index: 1;
     position: fixed;
-    width: 5%;
+    width: 4.5%;
     height: 10%;
-    padding: 18px;
+    padding: 1.5%;
+    margin-top: 1.5%;
 }
 
 .botoes {
@@ -25,13 +26,25 @@ body {
     position:relative;
     width: 92%;
     border-radius: 20px;
-    left: 147px;
-    top: 10px;
-    flex-wrap: wrap;
+    left: 67px;
+    justify-content: center;
+    align-items: center;
 }
 
 .opc {
-    padding: 0.5%;
-    margin: 1%;
-    flex-wrap:nowrap;
+    padding: 1.5%;
+    margin-inline: 3%;
+    border: none;
+    width: 9%;
+    color:rgb(21, 75, 119);
+    text-align:start;
+    font-size: 10px;
+    background-color: #b7f7fa;
+    font-family:fantasy;
+}
+
+.opc:hover {
+    background-color: rgb(80, 199, 235);
+    color:white;
+    transition: .3s;
 }
