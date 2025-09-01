@@ -8,8 +8,8 @@ body {
     width: 7%;
     position: fixed;
     z-index: 0;
-    left: -10px;
-    top: -10px
+    left: -2px;
+    top: -10px;
 }
 
 #cachorro {
@@ -17,4 +17,21 @@ body {
     position: fixed;
     width: 5%;
     height: 10%;
+    padding: 18px;
+}
+
+.botoes {
+    background-color: #b7f7fa;
+    position:relative;
+    width: 92%;
+    border-radius: 20px;
+    left: 147px;
+    top: 10px;
+    flex-wrap: wrap;
+}
+
+.opc {
+    padding: 0.5%;
+    margin: 1%;
+    flex-wrap:nowrap;
 }
