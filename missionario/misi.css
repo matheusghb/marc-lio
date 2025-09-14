@@ -1,6 +1,8 @@
+
 * {
     margin: 0;
     padding: 0;
+    scrollbar-width: none;
 }
 body {
     background-color: red;
@@ -38,6 +40,7 @@ body {
     flex-direction: column;
     justify-content:flex-start;
     font-family:Verdana, Geneva, Tahoma, sans-serif;
+    font-size: 1.3vw;
 }
 
 .title img {
@@ -46,15 +49,18 @@ body {
 }
 
 .title h6 {
-    letter-spacing: 4px;
+    letter-spacing: 0.4vw;
     font-size: .65vw;
 }
 
 #imgbolo {
-    margin: 14px;
-    height: 85vh;
-    max-width: 85%;
-    object-fit: cover;
+    margin: 8vh;
+    height: 75vh;
+    max-width: 20vw;
+    object-fit:fill;
+    animation: bolo 5s infinite alternate-reverse;
+    min-width: 20vw;
+    background-position-x: -180px;
 }
 
 .main {
@@ -71,55 +77,96 @@ body {
     font-size: 100px;
     z-index: -1;
     word-break: break-all;
+    margin-right: 1vw;
 }
 
 .buttonarray {
     display: flex;
-    justify-content: space-evenly;
+    justify-content: space-between;
 }
 
 .buttonarray button {
+    font-weight: bolder;
     margin: 2vh;
     padding: 3vh;
     padding-inline: 7vw;
-    max-width: 500px;
+    max-width: 50vw;
     font-size: 15px;
-    border: 2px solid black;
+    border: 5px solid black;
     background-color: white;
     border-radius: 20px;
 }
 
-.ba1 {
-    display: flex;
-    flex-flow: column;
-    align-items: flex-start;
-}
-
-.ba2 {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-end;
-}
-
 .barow {
+    margin: 3vh;
     display: flex;
-    width: 100%;
-    justify-content: space-between;
-    object-fit: contain;
 }
 
-.barow button {
+.ba1, .ba2 {
+    flex: 1;
+    word-break: keep-all;
+}
+
+.ba1 .item, .ba2 .item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 12px;
+}
+
+.ba1 h1, .ba2 h1 {
+    font-size: 3vw;
+}
+
+.ba2 h1 {
+    text-align: right;
+}
+
+.item button {
     background-color: white;
     border: none;
-    margin: 5px;
+    margin-inline: 1vw;
+    margin-top: 1.5vw;
+}
+
+.ba1 .item button {
+    margin-right: 12px; /* Espaço entre botão e h1 */
+}
+
+.ba2 .item button {
+    margin-left: 12px; /* Espaço entre h1 e botão */
 }
 
 .barow img {
     object-fit: contain;
-    width: 9vw;
+    width: 8vw;
     max-height: 70%;
 }
 
 .main footer {
     align-self: flex-end;
+}
+
+.topic {
+    font-size: 3vw;
+    margin-top: 10vh;
+}
+
+.topic p {
+    font-size: 1.9vw;
+    text-align: right;
+}
+
+.info footer {
+    margin: 1vw;
+    margin-top: 5vh;
+    text-align: right;
+    font-size: 1vw;
+}
+
+@keyframes bolo{
+    0% {background-image: url("https://www.shutterstock.com/image-photo/friends-celebrating-chocolate-birthday-cake-600nw-2381927951.jpg")}
+    25% {background-image: url("https://media.istockphoto.com/id/1049274384/photo/close-up-of-birthday-cake-being-cut-into-slices.jpg?s=612x612&w=0&k=20&c=zeTaC0jX8LQQj-JaVFZwWjMsz0Gq_28oHBVGzFeQD0E=")}
+    50% {background-image: url("https://imgcdn.stablediffusionweb.com/2024/10/2/246d7902-fbfa-4dd3-a97d-a099ee871143.jpg")}
+    75% {background-image: url("https://c8.alamy.com/comp/BAM065/group-of-young-people-cutting-birthday-cake-BAM065.jpg")}
+    100% {background-image: url("https://plus.unsplash.com/premium_photo-1675261617969-b8763662b0bc?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxwaG90by1yZWxhdGVkfDQ0fHx8ZW58MHx8fHx8")}
 }
